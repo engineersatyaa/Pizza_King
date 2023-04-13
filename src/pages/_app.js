@@ -1,5 +1,26 @@
-import '@/styles/globals.css'
+import "@/styles/globals.css";
+import Layout from "@/components/Layout";
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+// To use google font in all pages.
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  weight: ["100", "300", "400", "500", "700", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  /* There is no need for fallback font, next.js has already included somewhat similar fallback font. You can check font-family in dev tool by clicking on any text. So you can remove (fallback: ["arial"]) it.*/
+  fallback: ["arial"],
+});
+
+function App({ Component, pageProps }) {
+  console.log(pageProps);
+  return (
+    <main className={roboto.className}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </main>
+  );
 }
+
+export default App;
