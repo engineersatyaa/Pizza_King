@@ -8,7 +8,7 @@ function Home() {
       <meta name="description" content="Pizza King is a food delivery app." />
       <meta name="keywords" content="Tomato Pizza, Paneer Pizza" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <link rel="icon" href="/images/logo.png" />
+      <link rel="icon" href="/images/pizza1.png" />
     </Head>
   );
 }
