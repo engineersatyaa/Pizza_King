@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
-import Layout from "@/components/Layout";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 // To use google font in all pages.
 import { Roboto } from "next/font/google";
@@ -16,9 +17,9 @@ function App({ Component, pageProps }) {
   console.log(pageProps);
   return (
     <main className={roboto.className}>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
     </main>
   );
 }
