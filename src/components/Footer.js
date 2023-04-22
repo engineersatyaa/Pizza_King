@@ -5,6 +5,7 @@ import { GoLocation } from "react-icons/go";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import Wrapper from "./Wrapper";
 import Link from "next/link";
+import Image from "next/image";
 
 const linkData = [
   { col: 1, name: "Home", url: "/" },
@@ -111,12 +112,10 @@ function Footer() {
             </div>
           </div>
 
-          <div className="hidden md:flex flex-1 max-h-[350px] rounded-lg overflow-hidden">
-            <img
-              src="/footerPizza.jpg"
-              alt=""
-              className="w-full h-full object-cover"
-            />
+          <div className="hidden md:flex flex-1 max-h-[350px] rounded-lg overflow-hidden relative">
+            <Image src="/footerImg.jpg" fill className="object-cover" />
+
+            {/* Must add position: "relative" css to the parent element because by default, the img element will be assigned the position: "absolute" automatically while using "fill". */}
           </div>
         </section>
         <p className="text-center mt-5 text-xs">

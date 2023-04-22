@@ -4,7 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Link from "next/link";
 
-const imgArray = ["p1.jpg", "p2.jpg", "p3.jpg"];
+const imgArray = ["slide1.jpg", "slide2.jpg", "slide3.jpg"];
 
 function HeroSlider() {
   return (

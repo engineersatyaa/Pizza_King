@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
-import Wrapper from "./Wrapper";
-import Link from "next/link";
-import NavMenu from "./NavMenu";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { VscChromeClose } from "react-icons/vsc";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import Wrapper from "./Wrapper";
+import NavMenu from "./NavMenu";
 import PhoneMenu from "./PhoneMenu";
 
 function Header() {
@@ -52,12 +53,8 @@ function Header() {
             </span>
           </div>
 
-          <div className="w-8 md:w-12 h-8 md:h-12 border border-red-950 rounded-full ">
-            <img
-              src="/girldp.webp"
-              alt=""
-              className="w-full h-full object-cover rounded-full"
-            />
+          <div className="relative w-8 md:w-12 h-8 md:h-12 border border-black rounded-full overflow-hidden">
+            <Image src="/girldp.webp" fill className="object-cover" />
           </div>
 
           <div className="w-8 h-8 md:hidden flex items-center justify-center">

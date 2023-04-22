@@ -1,6 +1,7 @@
 import Head from "next/head";
 import HeroSlider from "@/components/HeroSlider";
 import Wrapper from "@/components/Wrapper";
+import PizzaCard from "@/components/PizzaCard";
 
 function Home() {
   return (
@@ -18,7 +19,7 @@ function Home() {
         <h1 className="text-[20px] font-bold min-[321px]:text-2xl md:text-[32px] md:mb-2">
           Welcome to Pizza King
         </h1>
-        <p className="text-sm text-black/70 md:text-lg ">
+        <p className="text-sm text-gray-600 md:text-lg ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
           provident ipsum eos! Corrupti quaerat laboriosam perspiciatis facilis
           et soluta, vitae reprehenderit eos debitis possimus officiis corporis
@@ -26,6 +27,16 @@ function Home() {
           recusandae cumque in veritatis maiores nostrum! Odit rem tenetur
           voluptas ipsum. Nulla voluptate minima velit.
         </p>
+        <hr className="sm:mt-4 border min-[426px]:border-2" />
+      </Wrapper>
+      <Wrapper className=" flex flex-wrap md:gap-3 justify-center my-3 min-[426px]:mt-7">
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
+        <PizzaCard />
       </Wrapper>
     </>
   );
