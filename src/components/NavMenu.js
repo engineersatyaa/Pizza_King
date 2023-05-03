@@ -12,10 +12,10 @@ const menuData = [
 ];
 
 const subMenuData = [
-  { category: "cheese pizza cheese pizza ", totalItems: 12 },
-  { category: "paneer pizza", totalItems: 10 },
-  { category: "tomato pizza", totalItems: 8 },
-  { category: "onion pizza", totalItems: 7 },
+  { category: "cheese pizza ", totalItems: 12, url: "/category/catName" },
+  { category: "paneer pizza", totalItems: 10, url: "/category/catName" },
+  { category: "tomato pizza", totalItems: 8, url: "/category/catName" },
+  { category: "onion pizza", totalItems: 7, url: "/category/catName" },
 ];
 
 function NavMenu() {
@@ -40,7 +40,7 @@ function NavMenu() {
                         return (
                           <li key={index}>
                             <Link
-                              href={"/"}
+                              href={item.url}
                               className="flex justify-between gap-8 text-[15px]  font-normal min-w-max w-full p-2 hover:bg-black/5"
                               onClick={() => setShowSubMenu(false)}
                             >

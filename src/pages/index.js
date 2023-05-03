@@ -27,9 +27,10 @@ function Home() {
           recusandae cumque in veritatis maiores nostrum! Odit rem tenetur
           voluptas ipsum. Nulla voluptate minima velit.
         </p>
-        <hr className="sm:mt-4 border min-[426px]:border-2" />
+        <hr className="sm:mt-4 border mt-4 min-[426px]:border-2" />
       </Wrapper>
-      <Wrapper className=" flex flex-wrap md:gap-3 justify-center my-3 min-[426px]:mt-7">
+      <Wrapper className=" flex flex-wrap min-[1265px]:gap-4 gap-3 justify-center my-5  min-[426px]:my-7 ">
+        <PizzaCard />
         <PizzaCard />
         <PizzaCard />
         <PizzaCard />

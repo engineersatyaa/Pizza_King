@@ -112,10 +112,15 @@ function Footer() {
             </div>
           </div>
 
-          <div className="hidden md:flex flex-1 max-h-[350px] rounded-lg overflow-hidden relative">
-            <Image src="/footerImg.jpg" fill className="object-cover" />
-
-            {/* Must add position: "relative" css to the parent element because by default, the img element will be assigned the position: "absolute" automatically while using "fill". */}
+          <div className="hidden md:flex flex-1 max-h-[350px] rounded-lg overflow-hidden">
+            <Image
+              src="/footerImg.jpg"
+              alt="pizza"
+              width={500}
+              height={400}
+              priority
+              className="object-cover"
+            />
           </div>
         </section>
         <p className="text-center mt-5 text-xs">

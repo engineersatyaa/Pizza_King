@@ -1,14 +1,15 @@
 import Wrapper from "./Wrapper";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Image from "next/image";
 import Link from "next/link";
 
 const imgArray = ["slide1.jpg", "slide2.jpg", "slide3.jpg"];
 
 function HeroSlider() {
   return (
-    <Wrapper className="my-3 min-[426px]:my-5 ">
+    <Wrapper className="my-3 min-[426px]:my-5">
       <Carousel
         autoPlay={true}
         infiniteLoop={true}
@@ -19,23 +20,24 @@ function HeroSlider() {
         renderArrowPrev={(clickHandler) => (
           <div
             onClick={clickHandler}
-            className="absolute top-[50%] left-0 sm:left-2 translate-y-[-50%] z-10 text-white/90 sm:text-white/60 sm:hover:text-white/90 sm:text-xl  sm:bg-black/20 sm:hover:bg-black/70 sm:cursor-pointer p-[5px] rounded-full "
+            className="absolute top-1/2 left-2 translate-y-[-50%] z-10"
           >
-            <AiOutlineLeft />
+            <AiFillLeftCircle className="hidden md:inline-block text-4xl bg-white/40 rounded-full hover:bg-white/70 cursor-pointer" />
           </div>
         )}
         renderArrowNext={(clickHandler) => (
           <div
             onClick={clickHandler}
-            className="absolute top-[50%] right-0 sm:right-2 translate-y-[-50%] z-10 text-white/90 sm:text-white/60 sm:hover:text-white/90 sm:text-xl  sm:bg-black/20 sm:hover:bg-black/70 sm:cursor-pointer p-[5px] rounded-full "
+            className="absolute top-1/2 right-2 translate-y-[-50%] z-10 "
           >
-            <AiOutlineRight />
+            <AiFillRightCircle className="hidden md:inline-block text-4xl bg-white/40 rounded-full hover:bg-white/70 cursor-pointer" />
           </div>
         )}
       >
         {imgArray.map((img, i) => (
           <div key={i} className="md:max-h-[calc(100vh-300px)]">
-            <img src={`/${img}`} alt="" />
+            <Image src={`/${img}`} alt="" width={900} height={700} priority />
+
             <p>
               <Link
                 href="/"

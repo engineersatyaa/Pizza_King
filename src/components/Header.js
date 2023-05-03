@@ -53,8 +53,14 @@ function Header() {
             </span>
           </div>
 
-          <div className="relative w-8 md:w-12 h-8 md:h-12 border border-black rounded-full overflow-hidden">
-            <Image src="/girldp.webp" fill className="object-cover" />
+          <div className="w-8 h-8 md:w-12 md:h-12 border border-black rounded-full overflow-hidden">
+            <Image
+              src="/girldp.webp"
+              alt=""
+              width={48}
+              height={48}
+              className="object-cover"
+            />
           </div>
 
           <div className="w-8 h-8 md:hidden flex items-center justify-center">
