@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-function PizzaCard({ className, noHoverEffect }) {
+function PizzaCard({ className }) {
   return (
     <Link
       href={`/pizza_details/xyz`}
@@ -9,16 +9,14 @@ function PizzaCard({ className, noHoverEffect }) {
         className || ""
       } `}
     >
-      <div className="">
+      <div>
         <Image
           src="/pizza1.png"
           width={250}
           height={250}
           alt="pizza"
           priority
-          className={`md:group-hover:rotate-180 md:transition-all ${
-            noHoverEffect || ""
-          } `}
+          className="md:group-hover:rotate-180 md:transition-all"
         />
       </div>
 

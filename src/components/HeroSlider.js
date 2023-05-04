@@ -20,7 +20,7 @@ function HeroSlider() {
         renderArrowPrev={(clickHandler) => (
           <div
             onClick={clickHandler}
-            className="absolute top-1/2 left-2 translate-y-[-50%] z-10"
+            className="absolute top-1/2 left-2 translate-y-[-50%] z-[5]"
           >
             <AiFillLeftCircle className="hidden md:inline-block text-4xl bg-white/40 rounded-full hover:bg-white/70 cursor-pointer" />
           </div>
@@ -28,7 +28,7 @@ function HeroSlider() {
         renderArrowNext={(clickHandler) => (
           <div
             onClick={clickHandler}
-            className="absolute top-1/2 right-2 translate-y-[-50%] z-10 "
+            className="absolute top-1/2 right-2 translate-y-[-50%] z-[5] "
           >
             <AiFillRightCircle className="hidden md:inline-block text-4xl bg-white/40 rounded-full hover:bg-white/70 cursor-pointer" />
           </div>
