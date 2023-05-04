@@ -46,12 +46,12 @@ function Header() {
         {showPhoneMenu && <PhoneMenu setShowPhoneMenu={setShowPhoneMenu} />}
 
         <div className="flex items-center justify-center gap-5 ">
-          <div className="relative cursor-pointer">
-            <AiOutlineShoppingCart className="opacity-80 w-[18px] md:w-7 h-[18px] md:h-7" />
+          <Link href="/cart" className="relative cursor-pointer">
+            <AiOutlineShoppingCart className="text-white w-[18px] h-[18px] md:w-7 md:h-7" />
             <span className="bg-white min-w-[18px]  md:min-w-[20px]  h-[18px] md:h-5 rounded-full absolute top-[-10px] right-[-9px] text-[9px] md:text-[11px] flex items-center justify-center">
               12
             </span>
-          </div>
+          </Link>
 
           <div className="w-8 h-8 md:w-12 md:h-12 border border-black rounded-full overflow-hidden">
             <Image
