@@ -14,7 +14,6 @@ const roboto = Roboto({
 });
 
 function App({ Component, pageProps }) {
-  console.log(pageProps);
   return (
     <main className={roboto.className}>
       <Header />

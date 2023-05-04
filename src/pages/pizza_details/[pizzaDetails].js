@@ -34,7 +34,7 @@ function PizzaDetails() {
     <Wrapper>
       <div className="sm:flex sm:gap-3 md:gap-4 sm:my-5 my-3">
         {/* images block start */}
-        <div className="sm:w-1/2 flex flex-col min-[1025px]:flex-row-reverse min-[1025px]:gap-3">
+        <div className="sm:w-1/2 flex flex-col min-[1025px]:flex-row-reverse min-[1025px]:gap-3 ">
           <div className=" flex justify-center ">
             <Image
               src={imgUrl}
@@ -46,7 +46,7 @@ function PizzaDetails() {
             />
           </div>
 
-          <div className=" w-full sm:w-auto flex justify-evenly items-center py-3  min-[1025px]:flex-col  min-[340px]:justify-center min-[340px]:gap-2">
+          <div className=" w-full sm:w-auto flex justify-evenly items-center py-3  min-[1025px]:flex-col min-[1025px]:max-h-[500px]  min-[340px]:justify-center min-[340px]:gap-2 ">
             {imgArray.map((img, index) => (
               <Image
                 src={img}
@@ -97,7 +97,8 @@ function PizzaDetails() {
           <p className=" !leading-tight text-sm text-gray-500 md:text-base  ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam minus
             neque nobis quas dolor! Deserunt debitis quidem accusamus nemo
-            reprehenderit.
+            reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Accusamus, voluptatum totam.
           </p>
 
           {/* pizza size block start */}
