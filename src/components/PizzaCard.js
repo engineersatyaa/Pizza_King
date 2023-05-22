@@ -25,7 +25,7 @@ function PizzaCard({ className }) {
           BBQ Chicken Pizza
         </h1>
 
-        <p className=" !leading-tight text-gray-500 min-[965px]:text-base md:text-sm md:mt-1 text-xs min-[426px]:flex hidden">
+        <p className=" !leading-tight text-gray-500 min-[965px]:text-base md:text-sm md:mt-1 text-xs min-[426px]:flex hidden ">
           Lorem ipsum dolor sit amet consectetur doloribus totam ducimus id
           accusantium reprehenderit!
         </p>

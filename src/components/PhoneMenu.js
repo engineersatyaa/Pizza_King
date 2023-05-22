@@ -52,7 +52,7 @@ function PhoneMenu({ setShowPhoneMenu }) {
                       return (
                         <li key={index}>
                           <Link
-                            href={"/"}
+                            href={"/category/non_veg"}
                             className="flex justify-between gap-8 text-sm font-medium  w-full p-3 border-t "
                             onClick={() => setShowPhoneMenu(false)}
                           >

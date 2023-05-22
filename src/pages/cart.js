@@ -3,126 +3,166 @@ import { BiFoodTag } from "react-icons/bi";
 import { MdDeleteForever } from "react-icons/md";
 import Image from "next/image";
 import Wrapper from "@/components/Wrapper";
+import Link from "next/link";
 
 function Cart() {
+  const [pizzaSize, setPizzaSize] = useState("small");
   const [quantity, setQuantity] = useState(1);
-  const [size, setSize] = useState("small");
 
-  console.log(size);
+  // console.log(pizzaSize);
   // console.log(quantity);
   // console.log(typeof quantity);
 
   return (
     <Wrapper className="my-3">
-      <h1 className="text-center text-lg font-bold">Sameer's Cart</h1>
+      <h1 className="text-center text-lg font-bold sm:text-[22px] md:text-2xl border-b md:border-b-2 pb-2 md:pb-3 my-4 sm:my-6">
+        Sameer's Cart
+      </h1>
+      {false ? (
+        <div className="flex flex-col gap-3 md:gap-5 lg:gap-6 md:flex-row">
+          {/* cart items block start */}
+          <div className="md:w-full">
+            <h3 className="text-base mb-1 md:font-medium">Cart Items</h3>
 
-      <div className="flex flex-col gap-3">
-        {/* cart items block start */}
-        <div>
-          <h3 className="text-base mb-1">Cart Items</h3>
-
-          {[1, 2].map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-col gap-3 bg-gray-100 border rounded-sm p-2 mb-2"
-            >
-              <div className="flex gap-2">
-                <Image
-                  src="/pizza1.png"
-                  alt=""
-                  width={300}
-                  height={300}
-                  className="w-28 h-28"
-                />
-
-                <div>
-                  <h4 className="text-base font-medium leading-tight mb-[2px]">
-                    Panner Pizza
-                  </h4>
-                  <h5
-                    className={`flex items-center gap-1 text-sm md:text-base md:font-medium  ${
-                      true ? "text-green-600" : "text-red-600"
-                    }`}
-                  >
-                    <BiFoodTag className="text-xl md:text-2xl ml-[-2px]" />
-                    {true ? "Pure-vegetarian" : "Non-vegetarian"}
-                  </h5>
-
-                  <h5 className="text-xs text-gray-500  my-[5px] flex flex-wrap items-center ">
-                    <span className=" text-sm text-black mr-1">
-                      Added Toppings :
-                    </span>
-                    Tomato, Onion, Capscicum
-                  </h5>
+            {[1, 2, 3, 4].map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col gap-3 bg-gray-200 border rounded-sm p-2 md:p-3 mb-2 md:flex-row md:justify-between"
+              >
+                <div className="flex gap-2">
+                  <Image
+                    src="/pizza1.png"
+                    alt=""
+                    width={300}
+                    height={300}
+                    className="w-28 h-28"
+                  />
 
                   <div>
-                    <div className="flex items-center gap-2 text-xs text-gray-500 my-2">
-                      <span className="text-sm text-black">Size :</span>
+                    <h4 className="text-base font-medium leading-tight mb-[2px] sm:text-lg md:text-xl">
+                      Panner Pizza
+                    </h4>
+                    <h5
+                      className={`flex items-center gap-1 text-sm md:text-base md:font-medium  ${
+                        true ? "text-green-600" : "text-red-600"
+                      }`}
+                    >
+                      <BiFoodTag className="text-xl md:text-2xl ml-[-2px]" />
+                      {true ? "Pure-vegetarian" : "Non-vegetarian"}
+                    </h5>
 
-                      <select
-                        className="border outline-none"
-                        onChange={(e) => setSize(e.target.value)}
-                      >
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                      </select>
-                    </div>
+                    <h5 className="text-xs md:text-sm  text-gray-500  my-[5px] flex flex-wrap items-center ">
+                      <span className=" text-sm md:font-medium md:text-gray-800 text-black mr-1">
+                        Added Toppings :
+                      </span>
+                      Tomato, Onion, Capscicum
+                    </h5>
 
                     <div>
-                      <label className="text-sm text-black flex items-center gap-2">
-                        Quantity :
-                        <input
-                          type="number"
-                          min="1"
-                          max="100"
-                          defaultValue={1}
-                          onChange={(e) => setQuantity(e.target.value)}
-                          className="border outline-none text-xs text-gray-500 text-center"
-                        />
-                      </label>
+                      <div className="flex items-center gap-2 text-xs md:text-sm text-gray-500 my-2">
+                        <span className="text-sm md:font-medium md:text-gray-800 text-black">
+                          Size :
+                        </span>
 
-                      {+quantity > 100 && (
-                        <h5 className="text-xs text-red-600 mt-[2px]">
-                          Pizza quantity can't be more than 100.
-                        </h5>
-                      )}
+                        <select
+                          className="border outline-none md:cursor-pointer"
+                          onChange={(e) => setPizzaSize(e.target.value)}
+                        >
+                          <option value="small">Small</option>
+                          <option value="medium">Medium</option>
+                          <option value="large">Large</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="text-sm md:font-medium md:text-gray-800 text-black flex items-center gap-2">
+                          Quantity :
+                          <input
+                            type="number"
+                            min="1"
+                            max="100"
+                            defaultValue={1}
+                            onChange={(e) => setQuantity(e.target.value)}
+                            className="border outline-none text-xs md:text-sm text-gray-500 text-center md:cursor-pointer"
+                          />
+                        </label>
+
+                        {+quantity > 100 && (
+                          <h5 className="text-xs text-red-600 mt-[2px]">
+                            Pizza quantity can't be more than 100.
+                          </h5>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
+
+                <div className="flex items-center justify-between px-2 md:px-0 md:flex-col">
+                  <span className="font-medium text-base min-w-max md:text-lg">
+                    &#8377; 25000
+                  </span>
+                  <button className="text-red-600 text-xl md:hover:bg-white p-1 rounded-sm">
+                    <MdDeleteForever />
+                  </button>
+                </div>
               </div>
-
-              <div className="flex items-center justify-between px-2">
-                <span className="font-medium text-base">&#8377; 850 </span>
-                <button className="text-red-700 text-xl">
-                  <MdDeleteForever />
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-        {/* cart items block end */}
-
-        {/* summary block start */}
-        <div>
-          <h3 className="text-base mb-1">Summary</h3>
-
-          <div className="bg-red-200 p-2 border border-red-400 rounded-sm">
-            <h4 className="flex justify-between text-base font-medium mb-1">
-              <span>Subtotal</span> <span> &#8377; 850 </span>
-            </h4>
-            <p className="text-sm text-gray-800">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-              assumenda suscipit eligendi amet, consectetur laboriosam.
-            </p>
+            ))}
           </div>
+          {/* cart items block end */}
 
-          <button className="bg-black/95 text-white w-full my-3 p-2 border border-black/95 rounded-full active:scale-[0.95] transition-all duration-75 ease-linear">
-            Checkout
-          </button>
+          {/* summary block start */}
+          <div className=" md:w-1/2">
+            <h3 className="text-base mb-1 md:font-medium">Summary</h3>
+
+            <div className="bg-red-200 py-2 px-3  border border-red-400 rounded-sm">
+              <h4 className="flex justify-between text-base font-medium mb-1 md:text-lg">
+                <span>Subtotal</span> <span> &#8377; 85000 </span>
+              </h4>
+
+              <p className="text-sm text-gray-800 md:text-[15px]">
+                The subtotal is the total price of your order,including duties
+                and taxes before any applicable discount. It does not include
+                delivery charges and transaction fees.
+              </p>
+            </div>
+
+            <button className="bg-black/95 text-white w-full my-3 p-2 border border-black/95 rounded-full active:scale-[0.95] transition-all duration-75 ease-linear md:font-medium">
+              Checkout
+            </button>
+          </div>
+          {/* summary block end */}
         </div>
-        {/* summary block end */}
-      </div>
+      ) : (
+        <>
+          {/* empty cart page start */}
+          <div className="flex flex-col items-center justify-center gap-5 h-[calc(100vh-120px)] md:h-[calc(100vh-165px)]">
+            <Image
+              src="/emptyCart.png"
+              alt="Empty cart"
+              width={350}
+              height={350}
+              className="mb-2 w-10/12 min-[425px]:w-auto -mt-14"
+            />
+
+            <h1 className="text-base font-semibold sm:text-lg md:text-xl">
+              Your cart is empty !
+            </h1>
+
+            <p className="text-sm  md:text-base md:font-medium text-gray-500  text-center ">
+              Looks like you haven't added anything in your cart. Go ahead and
+              explore top pizza categories.
+            </p>
+
+            <Link
+              href="/"
+              className=" bg-black/95 text-white text-sm md:text-base md:font-medium w-52 text-center p-2 mt-2 rounded-full active:scale-[0.95] transition-all duration-75 ease-linear "
+            >
+              Continue Shopping
+            </Link>
+          </div>
+          {/* empty cart page end */}
+        </>
+      )}
     </Wrapper>
   );
 }
