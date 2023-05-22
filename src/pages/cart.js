@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { BiFoodTag } from "react-icons/bi";
 import { MdDeleteForever } from "react-icons/md";
-import Image from "next/image";
+import { CgArrowRight } from "react-icons/cg";
 import Wrapper from "@/components/Wrapper";
+import Image from "next/image";
 import Link from "next/link";
 
 function Cart() {
@@ -155,9 +156,10 @@ function Cart() {
 
             <Link
               href="/"
-              className=" bg-black/95 text-white text-sm md:text-base md:font-medium w-52 text-center p-2 mt-2 rounded-full active:scale-[0.95] transition-all duration-75 ease-linear "
+              className="bg-red-600 text-white text-sm md:text-base md:font-medium md:cursor-pointer w-52 md:w-60 md:p-[10px]  p-2 mt-2 rounded-full active:scale-[0.95] transition-all duration-75 ease-linear md:hover:bg-black/95  flex items-center justify-center gap-2 "
             >
               Continue Shopping
+              <CgArrowRight size={24} />
             </Link>
           </div>
           {/* empty cart page end */}
