@@ -87,7 +87,7 @@ function Footer() {
 
           <div className="flex-1 text-sm">
             <h1 className=" text-lg md:text-[22px] font-bold text-center mb-3 underline underline-offset-4 decoration-1 md:decoration-2">
-              Useful links
+              Useful Links
             </h1>
 
             <div className="flex gap-5 justify-around sm:justify-evenly md:text-base border-b border-white/20 pb-4 sm:border-none sm:pb-0">

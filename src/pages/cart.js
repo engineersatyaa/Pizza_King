@@ -17,7 +17,7 @@ function Cart() {
   return (
     <Wrapper className="my-3">
       <h1 className="text-center text-lg font-bold sm:text-[22px] md:text-2xl border-b md:border-b-2 pb-2 md:pb-3 my-4 sm:my-6">
-        Sameer's Cart
+        SHOPPING CART
       </h1>
 
       {true ? (
@@ -112,19 +112,33 @@ function Cart() {
           </div>
           {/* cart items block end */}
 
-          {/* summary block start */}
+          {/* order summary block start */}
           <div className=" md:w-1/2  md:sticky top-20  h-full">
             {/* NOTE: Before using position:sticky; there are few points to remember.
              1. You must add height css property to the element to make that element sticky.
              2. position: sticky won't work if ancestor element has one of the following values for the overflow property: hidden, scroll, or auto.
              3. You must specify at least one of top, left, bottom or right css property. */}
 
-            <h3 className="text-base mb-1 md:font-medium">Summary</h3>
+            <h3 className="text-base mb-1 md:font-medium">Order Summary</h3>
 
             <div className="bg-red-200 py-2 px-3  border border-red-400 rounded-sm">
-              <h4 className="flex justify-between text-base font-medium mb-1 md:text-lg">
-                <span>Subtotal</span> <span> &#8377; 85000 </span>
+              <h4 className="flex justify-between text-base font-medium lg:text-[17px]">
+                <span>Subtotal</span> <span> &#8377; 850.00 </span>
               </h4>
+
+              <h4 className="flex justify-between text-base font-medium lg:text-[17px]">
+                <span>Discount</span> <span> &#8377; 50.00 </span>
+              </h4>
+
+              <h4 className="flex justify-between text-base font-medium lg:text-[17px]">
+                <span>Delivery Charge</span> <span> &#8377; 0.00 </span>
+              </h4>
+
+              <h4 className="flex justify-between text-base font-medium lg:text-[17px]">
+                <span>Total</span> <span> &#8377; 800.00 </span>
+              </h4>
+
+              <hr className="border-t border-gray-500 border-dashed my-3" />
 
               <p className="text-sm text-gray-800 md:text-[15px]">
                 The subtotal is the total price of your order,including duties
@@ -137,7 +151,7 @@ function Cart() {
               Checkout
             </button>
           </div>
-          {/* summary block end */}
+          {/* order summary block end */}
         </div>
       ) : (
         <>
