@@ -15,11 +15,11 @@ function Header() {
 
   const controlNavbar = () => {
     if (
-      window.scrollY > 90 &&
+      window.scrollY > 80 &&
       window.scrollY > lastValueOfScrollY &&
       !showPhoneMenu
     ) {
-      setShowNavbar("translate-y-[-70px]");
+      setShowNavbar("translate-y-[-72px]");
     } else {
       setShowNavbar("translate-y-0");
     }
@@ -34,7 +34,7 @@ function Header() {
 
   return (
     <header
-      className={`w-full h-[50px] md:h-[70px] bg-red-600 flex items-center justify-between sticky top-0 left-0 z-10 transition-transform duration-300 ${showNavbar} `}
+      className={`w-full h-[50px] md:h-[70px] bg-red-600 flex items-center justify-between sticky top-0 z-10 transition-transform duration-300 ${showNavbar} `}
     >
       <Wrapper className="flex items-center gap-6 justify-between h-[50px] md:h-[70px]  relative">
         <h1 className="text-[22px] md:text-[35px] min-[321px]:text-[28px] text-white font-bold min-w-max ">

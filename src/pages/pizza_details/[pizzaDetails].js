@@ -34,7 +34,7 @@ function PizzaDetails() {
     <Wrapper>
       <div className="sm:flex sm:gap-3 md:gap-4 sm:my-5 my-3">
         {/* images block start */}
-        <div className="sm:w-1/2 flex flex-col min-[1025px]:flex-row-reverse min-[1025px]:gap-3 ">
+        <div className="sm:w-1/2 flex flex-col min-[1025px]:flex-row-reverse min-[1025px]:gap-3   sm:sticky sm:top-[70px] md:top-[90px] h-full">
           <div className=" flex justify-center ">
             <Image
               src={imgUrl}

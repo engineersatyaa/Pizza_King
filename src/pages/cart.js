@@ -19,13 +19,14 @@ function Cart() {
       <h1 className="text-center text-lg font-bold sm:text-[22px] md:text-2xl border-b md:border-b-2 pb-2 md:pb-3 my-4 sm:my-6">
         Sameer's Cart
       </h1>
-      {false ? (
+
+      {true ? (
         <div className="flex flex-col gap-3 md:gap-5 lg:gap-6 md:flex-row">
           {/* cart items block start */}
           <div className="md:w-full">
             <h3 className="text-base mb-1 md:font-medium">Cart Items</h3>
 
-            {[1, 2, 3, 4].map((item, index) => (
+            {[1, 2, 3].map((item, index) => (
               <div
                 key={index}
                 className="flex flex-col gap-3 bg-gray-200 border rounded-sm p-2 md:p-3 mb-2 md:flex-row md:justify-between"
@@ -112,7 +113,12 @@ function Cart() {
           {/* cart items block end */}
 
           {/* summary block start */}
-          <div className=" md:w-1/2">
+          <div className=" md:w-1/2  md:sticky top-20  h-full">
+            {/* NOTE: Before using position:sticky; there are few points to remember.
+             1. You must add height css property to the element to make that element sticky.
+             2. position: sticky won't work if ancestor element has one of the following values for the overflow property: hidden, scroll, or auto.
+             3. You must specify at least one of top, left, bottom or right css property. */}
+
             <h3 className="text-base mb-1 md:font-medium">Summary</h3>
 
             <div className="bg-red-200 py-2 px-3  border border-red-400 rounded-sm">
