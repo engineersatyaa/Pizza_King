@@ -24,7 +24,7 @@ function Cart() {
         <div className="flex flex-col gap-3 md:gap-5 lg:gap-6 md:flex-row">
           {/* cart items block start */}
           <div className="md:w-full">
-            <h3 className="text-base mb-1 md:font-medium">Cart Items</h3>
+            <h3 className="text-base mb-1 font-medium">CART ITEMS</h3>
 
             {[1, 2, 3].map((item, index) => (
               <div
@@ -119,7 +119,7 @@ function Cart() {
              2. position: sticky won't work if ancestor element has one of the following values for the overflow property: hidden, scroll, or auto.
              3. You must specify at least one of top, left, bottom or right css property. */}
 
-            <h3 className="text-base mb-1 md:font-medium">Order Summary</h3>
+            <h3 className="text-base mb-1 font-medium">ORDER SUMMARY</h3>
 
             <div className="bg-red-200 py-2 px-3  border border-red-400 rounded-sm">
               <h4 className="flex justify-between text-base font-medium lg:text-[17px]">
