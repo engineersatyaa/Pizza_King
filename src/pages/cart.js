@@ -134,7 +134,7 @@ function Cart() {
                 <span>Delivery Charge</span> <span> &#8377; 0.00 </span>
               </h4>
 
-              <h4 className="flex justify-between text-base font-medium lg:text-[17px]">
+              <h4 className="flex justify-between text-lg font-bold lg:text-xl text-red-700">
                 <span>Total</span> <span> &#8377; 800.00 </span>
               </h4>
 
