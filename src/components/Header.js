@@ -51,7 +51,7 @@ function Header() {
         <h1 className="text-[22px] md:text-[35px] min-[321px]:text-[28px] text-white font-bold min-w-max">
           <Link
             href="/"
-            className="inline-block"
+            className="flex"
             onClick={closePhoneMenuAndSubMenu}
           >
             Pizza King
