@@ -49,11 +49,7 @@ function Header() {
       <Wrapper className="flex items-center gap-6 justify-between h-[50px] md:h-[70px]  relative">
         {/* Logo block start */}
         <h1 className="text-[22px] md:text-[35px] min-[321px]:text-[28px] text-white font-bold min-w-max">
-          <Link
-            href="/"
-            className="flex"
-            onClick={closePhoneMenuAndSubMenu}
-          >
+          <Link href="/" className="flex" onClick={closePhoneMenuAndSubMenu}>
             Pizza King
           </Link>
         </h1>
@@ -89,7 +85,7 @@ function Header() {
           {/* Profile pic block start */}
           <div className="w-8 h-8 ml-1 md:w-12 md:h-12 rounded-full overflow-hidden">
             <Link
-              href="/cart"
+              href="/pizza_details/xyz"
               className="flex"
               onClick={closePhoneMenuAndSubMenu}
             >
