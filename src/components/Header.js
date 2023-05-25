@@ -48,18 +48,19 @@ function Header() {
     >
       <Wrapper className="flex items-center gap-6 justify-between h-[50px] md:h-[70px]  relative">
         {/* Logo block start */}
+
         <h1 className="text-[22px] md:text-[35px] min-[321px]:text-[28px] text-white font-bold min-w-max">
           <Link href="/" className="flex" onClick={closePhoneMenuAndSubMenu}>
             Pizza King
           </Link>
         </h1>
+
         {/* Logo block end */}
 
         <NavMenu />
 
         <PhoneMenu
           showPhoneMenu={showPhoneMenu}
-          setShowPhoneMenu={setShowPhoneMenu}
           showSubMenu={showSubMenu}
           setShowSubMenu={setShowSubMenu}
           closePhoneMenuAndSubMenu={closePhoneMenuAndSubMenu}
@@ -67,6 +68,7 @@ function Header() {
 
         <div className="flex items-center justify-center gap-5 ">
           {/* Cart block start */}
+
           <div className="relative">
             <Link
               href="/cart"
@@ -80,9 +82,11 @@ function Header() {
               </span>
             </Link>
           </div>
+
           {/* Cart block end */}
 
           {/* Profile pic block start */}
+
           <div className="w-8 h-8 ml-1 md:w-12 md:h-12 rounded-full overflow-hidden">
             <Link
               href="/pizza_details/xyz"
@@ -98,9 +102,11 @@ function Header() {
               />
             </Link>
           </div>
+
           {/* Profile pic block end */}
 
           {/* Hamburger block for phone start */}
+
           <div className="w-8 h-8 md:hidden flex items-center justify-center text-white">
             {showPhoneMenu ? (
               <VscChromeClose
@@ -119,6 +125,7 @@ function Header() {
               />
             )}
           </div>
+
           {/* Hamburger block for phone end */}
         </div>
       </Wrapper>

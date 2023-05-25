@@ -31,14 +31,13 @@ const subMenuData = [
 function PhoneMenu(props) {
   const {
     showPhoneMenu,
-    setShowPhoneMenu,
     showSubMenu,
     setShowSubMenu,
     closePhoneMenuAndSubMenu,
   } = props;
 
-  console.log(showSubMenu);
 
+  console.log(showPhoneMenu)
   /* To prevent background scrolling when phone menu is opened.
      Add overflow-y: hidden css property to the "body" element when the phone 
      menu is opened and add overflow-y: visible when you close the phone menu. */
