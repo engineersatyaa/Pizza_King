@@ -5,7 +5,7 @@ function PizzaCard({ className }) {
   return (
     <Link
       href={`/pizza_details/xyz`}
-      className={`group p-2 min-[426px]:shadow-lg flex flex-col items-center justify-center min-[963px]:w-[24%] sm:w-[30%] w-[47%] border border-gray-200 rounded md:hover:border-gray-400 ${
+      className={`group bg-white p-2 min-[426px]:shadow-lg flex flex-col items-center justify-center min-[963px]:w-[24%] sm:w-[30%] w-[47%] border border-gray-200 rounded md:hover:border-gray-400 ${
         className || ""
       } `}
     >

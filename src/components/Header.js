@@ -87,7 +87,7 @@ function Header() {
 
           {/* Profile pic block start */}
 
-          <div className="w-8 h-8 ml-1 md:w-12 md:h-12 rounded-full overflow-hidden">
+          <div className="w-8 h-8 ml-1 md:w-11 md:h-11 md:mr-[2px] rounded-full overflow-hidden">
             <Link
               href="/pizza_details/xyz"
               className="flex"
