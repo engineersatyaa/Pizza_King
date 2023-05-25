@@ -48,7 +48,7 @@ function PhoneMenu(props) {
 
   return (
     <ul
-      className={`list-none md:hidden absolute top-[50px] left-0 h-[calc(100vh-50px)] w-full bg-white overflow-y-auto transition-all ease-out ${
+      className={`list-none md:hidden absolute top-[50px] left-0 h-[calc(100vh-50px)] w-screen bg-white overflow-y-auto transition-all ease-out ${
         showPhoneMenu ? "translate-x-[0vw]" : "translate-x-[100vw]"
       }`}
     >
