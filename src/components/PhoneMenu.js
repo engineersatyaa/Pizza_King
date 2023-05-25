@@ -36,8 +36,6 @@ function PhoneMenu(props) {
     closePhoneMenuAndSubMenu,
   } = props;
 
-
-  console.log(showPhoneMenu)
   /* To prevent background scrolling when phone menu is opened.
      Add overflow-y: hidden css property to the "body" element when the phone 
      menu is opened and add overflow-y: visible when you close the phone menu. */
@@ -50,7 +48,7 @@ function PhoneMenu(props) {
 
   return (
     <ul
-      className={`md:hidden absolute top-[50px] left-0 h-[calc(100vh-50px)] w-screen bg-white overflow-y-auto transition-all ease-out ${
+      className={`list-none md:hidden absolute top-[50px] left-0 h-[calc(100vh-50px)] w-full bg-white overflow-y-auto transition-all ease-out ${
         showPhoneMenu ? "translate-x-[0vw]" : "translate-x-[100vw]"
       }`}
     >
@@ -72,7 +70,7 @@ function PhoneMenu(props) {
               </div>
 
               {showSubMenu && (
-                <ul className="min-w-max bg-black/5">
+                <ul className="list-none min-w-max bg-black/5">
                   {subMenuData.map((item, index) => (
                     <li key={index}>
                       <Link
