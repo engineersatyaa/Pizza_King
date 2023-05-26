@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { useRouter } from "next/router";
 
 // To use google font in all pages.
 import { Roboto } from "next/font/google";
@@ -14,11 +15,17 @@ const roboto = Roboto({
 });
 
 function App({ Component, pageProps }) {
+  const router = useRouter().pathname;
+
+  const isLoginOrRegisterPage = router === "/login" || router === "/register";
+
   return (
     <main className={roboto.className}>
-      <Header />
+      {!isLoginOrRegisterPage && <Header />}
+
       <Component {...pageProps} />
-      <Footer />
+
+      {!isLoginOrRegisterPage && <Footer />}
     </main>
   );
 }

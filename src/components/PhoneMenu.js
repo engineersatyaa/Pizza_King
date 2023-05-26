@@ -1,10 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import { IoHome } from "react-icons/io5";
-import { FaPizzaSlice } from "react-icons/fa";
-import { RiLoginCircleFill, RiLogoutCircleFill } from "react-icons/ri";
-import { MdContactPhone } from "react-icons/md";
 import { GiFullPizza } from "react-icons/gi";
+import { RiLoginCircleFill, RiLogoutCircleFill } from "react-icons/ri";
+
+import {
+  FaPizzaSlice,
+  FaSearchPlus,
+  FaUserCheck,
+  FaUserCircle,
+} from "react-icons/fa";
+
 import {
   BsChevronDown,
   BsChevronUp,
@@ -18,26 +24,43 @@ const menuData = [
     icon: <IoHome size={20} className="text-red-600" />,
     url: "/",
   },
+
+  {
+    name: "User Profile",
+    icon: <FaUserCircle size={20} className="text-red-600" />,
+    url: "/profile",
+  },
+
   {
     name: "Shopping Cart",
     icon: <BsFillCartCheckFill size={20} className="text-red-600" />,
     url: "/cart",
   },
+
   {
     name: "Categories",
     icon: <FaPizzaSlice size={20} className="text-red-600" />,
     subMenu: true,
   },
+
   {
-    name: "Contact",
-    icon: <MdContactPhone size={20} className="text-red-600" />,
-    url: "/contact",
+    name: "Search Pizza",
+    icon: <FaSearchPlus size={20} className="text-red-600" />,
+    url: "/search",
   },
+
   {
-    name: "About",
+    name: "About Us",
     icon: <BsExclamationCircleFill size={20} className="text-red-600" />,
     url: "/about",
   },
+
+  {
+    name: "Sign Up",
+    icon: <FaUserCheck size={20} className="text-red-600" />,
+    url: "/register",
+  },
+
   {
     name: "Login",
     icon: <RiLoginCircleFill size={24} className="text-red-600 -mx-[2px]" />,
