@@ -13,12 +13,36 @@ import {
 } from "react-icons/bs";
 
 const menuData = [
-  { name: "Home", icon: <IoHome />, url: "/" },
-  { name: "Shopping Cart", icon: <BsFillCartCheckFill />, url: "/cart" },
-  { name: "Categories", icon: <FaPizzaSlice />, subMenu: true },
-  { name: "Contact", icon: <MdContactPhone />, url: "/contact" },
-  { name: "About", icon: <BsExclamationCircleFill />, url: "/about" },
-  { name: "Login", icon: <RiLoginCircleFill size={16} />, url: "/login" },
+  {
+    name: "Home",
+    icon: <IoHome size={20} className="text-red-600" />,
+    url: "/",
+  },
+  {
+    name: "Shopping Cart",
+    icon: <BsFillCartCheckFill size={20} className="text-red-600" />,
+    url: "/cart",
+  },
+  {
+    name: "Categories",
+    icon: <FaPizzaSlice size={20} className="text-red-600" />,
+    subMenu: true,
+  },
+  {
+    name: "Contact",
+    icon: <MdContactPhone size={20} className="text-red-600" />,
+    url: "/contact",
+  },
+  {
+    name: "About",
+    icon: <BsExclamationCircleFill size={20} className="text-red-600" />,
+    url: "/about",
+  },
+  {
+    name: "Login",
+    icon: <RiLoginCircleFill size={24} className="text-red-600 -mx-[2px]" />,
+    url: "/login",
+  },
 ];
 
 const subMenuData = [
@@ -44,9 +68,9 @@ function PhoneMenu(props) {
 
   return (
     <ul
-      className={`list-none md:hidden absolute top-[50px] left-0 h-[calc(100vh-50px)] w-full bg-white overflow-y-auto transition-all duration-100  ease-in-out ${
+      className={`list-none md:hidden absolute top-[50px] left-0 h-[calc(100vh-50px)] w-full bg-black/95 overflow-y-auto transition-all duration-100 ease-in-out ${
         showPhoneMenu ? "scale-100" : "scale-0"
-      }  origin-top-right`}
+      }  origin-top-right text-white`}
     >
       {menuData.map((menu, index) => (
         <React.Fragment key={index}>
@@ -54,7 +78,7 @@ function PhoneMenu(props) {
             <li>
               <div
                 onClick={() => setShowSubMenu(!showSubMenu)}
-                className="flex items-center gap-2 p-3 font-medium text-sm border-t"
+                className="flex items-center gap-4 p-3 font-medium text-sm border-t border-white/10"
               >
                 {menu.icon}
                 {menu.name}
@@ -66,16 +90,16 @@ function PhoneMenu(props) {
               </div>
 
               {showSubMenu && (
-                <ul className="list-none min-w-max bg-black/5">
+                <ul className="list-none min-w-max ">
                   {subMenuData.map((subMenu, index) => (
                     <li key={index}>
                       <Link
                         href={"/category/non_veg"}
-                        className="flex justify-between gap-8 text-sm font-medium  w-full p-3 border-t "
+                        className="flex justify-between gap-8 text-sm font-medium  w-full p-3 border-t border-white/10"
                         onClick={() => setShowPhoneMenu(false)}
                       >
-                        <span className="flex items-center gap-2">
-                          <GiFullPizza />
+                        <span className="flex items-center gap-4 lowercase">
+                          <GiFullPizza size={19} />
                           {subMenu.category}
                         </span>
 
@@ -91,7 +115,7 @@ function PhoneMenu(props) {
               <Link
                 href={menu.url}
                 onClick={() => setShowPhoneMenu(false)}
-                className={`flex items-center gap-2 p-3 font-medium text-sm  border-t ${
+                className={`flex items-center gap-4 p-3 font-medium text-sm  border-t border-white/10 ${
                   menu.name === "Home" && "border-t-0"
                 }`}
               >
