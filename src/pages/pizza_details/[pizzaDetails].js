@@ -134,12 +134,12 @@ function PizzaDetails() {
             {toppingsArray.map((pizzaTopping) => (
               <label
                 key={pizzaTopping}
-                className="flex items-center justify-center gap-2 border border-gray-200 text-sm md:text-base font-medium text-gray-500 px-2 py-[6px] capitalize  md:cursor-pointer "
+                className="flex items-center justify-center gap-2 border border-gray-200 text-sm md:text-base font-medium text-gray-500 px-2 py-[6px] capitalize  md:cursor-pointer"
               >
                 <input
                   type="checkbox"
                   value={pizzaTopping}
-                  className="w-[15px] h-[15px] "
+                  className="w-[15px] h-[15px] accent-red-600"
                   onClick={(e) => setToppings([...toppings, e.target.value])}
                 />
                 {pizzaTopping}

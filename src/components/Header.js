@@ -1,6 +1,4 @@
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { VscChromeClose } from "react-icons/vsc";
-import { RxHamburgerMenu } from "react-icons/rx";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,11 +11,6 @@ function Header() {
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [showNavbar, setShowNavbar] = useState("translate-y-0");
   const [lastValueOfScrollY, setLastValueOfScrollY] = useState(0);
-
-  const closePhoneMenuAndSubMenu = () => {
-    setShowPhoneMenu(false);
-    setShowSubMenu(false);
-  };
 
   // Navbar control start
 
@@ -50,7 +43,11 @@ function Header() {
         {/* Logo block start */}
 
         <h1 className="text-[22px] md:text-[35px] min-[321px]:text-[28px] text-white font-bold min-w-max">
-          <Link href="/" className="flex" onClick={closePhoneMenuAndSubMenu}>
+          <Link
+            href="/"
+            className="flex"
+            onClick={() => setShowPhoneMenu(false)}
+          >
             Pizza King
           </Link>
         </h1>
@@ -61,9 +58,9 @@ function Header() {
 
         <PhoneMenu
           showPhoneMenu={showPhoneMenu}
+          setShowPhoneMenu={setShowPhoneMenu}
           showSubMenu={showSubMenu}
           setShowSubMenu={setShowSubMenu}
-          closePhoneMenuAndSubMenu={closePhoneMenuAndSubMenu}
         />
 
         <div className="flex items-center justify-center gap-5 ">
@@ -73,7 +70,7 @@ function Header() {
             <Link
               href="/cart"
               className="flex"
-              onClick={closePhoneMenuAndSubMenu}
+              onClick={() => setShowPhoneMenu(false)}
             >
               <AiOutlineShoppingCart className="text-white w-[18px] h-[18px] md:w-7 md:h-7" />
 
@@ -91,7 +88,7 @@ function Header() {
             <Link
               href="/pizza_details/xyz"
               className="flex"
-              onClick={closePhoneMenuAndSubMenu}
+              onClick={() => setShowPhoneMenu(false)}
             >
               <Image
                 src="/girldp.webp"
@@ -107,23 +104,30 @@ function Header() {
 
           {/* Hamburger block for phone start */}
 
-          <div className="w-8 h-8 md:hidden flex items-center justify-center text-white">
-            {showPhoneMenu ? (
-              <VscChromeClose
-                className="w-8 h-8"
-                strokeWidth={0.5}
-                onClick={() => {
-                  setShowPhoneMenu(!showPhoneMenu);
-                  setShowSubMenu(false);
-                }}
-              />
-            ) : (
-              <RxHamburgerMenu
-                className="w-8 h-8"
-                strokeWidth={0.5}
-                onClick={() => setShowPhoneMenu(!showPhoneMenu)}
-              />
-            )}
+          <div
+            className="w-8 h-[26px] flex flex-col justify-between md:hidden"
+            onClick={() => {
+              setShowSubMenu(false);
+              setShowPhoneMenu(!showPhoneMenu);
+            }}
+          >
+            <span
+              className={`bg-white w-full h-1 transition-all origin-right ${
+                showPhoneMenu && "-rotate-45"
+              }`}
+            ></span>
+
+            <span
+              className={`bg-white w-full h-1 transition-all ${
+                showPhoneMenu && "opacity-0"
+              }`}
+            ></span>
+
+            <span
+              className={`bg-white w-full h-1 transition-all origin-right ${
+                showPhoneMenu && "rotate-45"
+              }`}
+            ></span>
           </div>
 
           {/* Hamburger block for phone end */}

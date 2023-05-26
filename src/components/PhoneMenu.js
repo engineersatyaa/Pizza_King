@@ -29,12 +29,8 @@ const subMenuData = [
 ];
 
 function PhoneMenu(props) {
-  const {
-    showPhoneMenu,
-    showSubMenu,
-    setShowSubMenu,
-    closePhoneMenuAndSubMenu,
-  } = props;
+  const { showPhoneMenu, setShowPhoneMenu, showSubMenu, setShowSubMenu } =
+    props;
 
   /* To prevent background scrolling when phone menu is opened.
      Add overflow-y: hidden css property to the "body" element when the phone 
@@ -44,24 +40,24 @@ function PhoneMenu(props) {
     ? typeof document !== "undefined" &&
       (document.body.style.overflowY = "hidden")
     : typeof document !== "undefined" &&
-      (document.body.style.overflowY = "visible");
+      (document.body.style.overflowY = "auto");
 
   return (
     <ul
-      className={`list-none md:hidden absolute top-[50px] left-0 h-[calc(100vh-50px)] w-screen bg-white overflow-y-auto transition-all ease-out ${
-        showPhoneMenu ? "translate-x-[0vw]" : "translate-x-[100vw]"
-      }`}
+      className={`list-none md:hidden absolute top-[50px] left-0 h-[calc(100vh-50px)] w-full bg-white overflow-y-auto transition-all duration-100  ease-in-out ${
+        showPhoneMenu ? "scale-100" : "scale-0"
+      }  origin-top-right`}
     >
-      {menuData.map((item, index) => (
+      {menuData.map((menu, index) => (
         <React.Fragment key={index}>
-          {item.subMenu ? (
+          {menu.subMenu ? (
             <li>
               <div
                 onClick={() => setShowSubMenu(!showSubMenu)}
                 className="flex items-center gap-2 p-3 font-medium text-sm border-t"
               >
-                {item.icon}
-                {item.name}
+                {menu.icon}
+                {menu.name}
                 {showSubMenu ? (
                   <BsChevronUp strokeWidth={0.3} />
                 ) : (
@@ -71,19 +67,19 @@ function PhoneMenu(props) {
 
               {showSubMenu && (
                 <ul className="list-none min-w-max bg-black/5">
-                  {subMenuData.map((item, index) => (
+                  {subMenuData.map((subMenu, index) => (
                     <li key={index}>
                       <Link
                         href={"/category/non_veg"}
                         className="flex justify-between gap-8 text-sm font-medium  w-full p-3 border-t "
-                        onClick={closePhoneMenuAndSubMenu}
+                        onClick={() => setShowPhoneMenu(false)}
                       >
                         <span className="flex items-center gap-2">
                           <GiFullPizza />
-                          {item.category}
+                          {subMenu.category}
                         </span>
 
-                        <span className="opacity-50">{item.totalItems}</span>
+                        <span className="opacity-50">{subMenu.totalItems}</span>
                       </Link>
                     </li>
                   ))}
@@ -93,14 +89,14 @@ function PhoneMenu(props) {
           ) : (
             <li>
               <Link
-                href={item.url}
-                onClick={closePhoneMenuAndSubMenu}
+                href={menu.url}
+                onClick={() => setShowPhoneMenu(false)}
                 className={`flex items-center gap-2 p-3 font-medium text-sm  border-t ${
-                  item.name === "Home" && "border-t-0"
+                  menu.name === "Home" && "border-t-0"
                 }`}
               >
-                {item.icon}
-                {item.name}
+                {menu.icon}
+                {menu.name}
               </Link>
             </li>
           )}
