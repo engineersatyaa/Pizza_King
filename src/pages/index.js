@@ -31,11 +31,11 @@ function Home() {
           et soluta, vitae reprehenderit eos debitis possimus officiis corporis
           aperiam sequi delectus optio ex deserunt voluptate odio repellat
           recusandae cumque in veritatis maiores nostrum! Odit rem tenetur
-          voluptas ipsum. Nulla voluptate minima velit
+          voluptas ipsum. Nulla optio voluptate minima velit
           <span className={`${readMore && "hidden"}`}>...</span>
           <span className={`${!readMore && "hidden"} mx-1`}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-            tenetur quas, nemo minus id aut? A quis eius voluptatibus rerum.
+            tenetur quas, nemo minus id aut. A quis eius voluptatibus rerum.
             Lorem ipsum dolor sit,Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Natus, quam! amet consectetur adipisicing elit. Et
             quas facilis itaque culpa.
