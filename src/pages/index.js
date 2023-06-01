@@ -1,23 +1,13 @@
-import { useState } from "react";
-import Head from "next/head";
 import HeroSlider from "@/components/HeroSlider";
 import Wrapper from "@/components/Wrapper";
 import PizzaCard from "@/components/PizzaCard";
+import { useState } from "react";
 
 function Home() {
   const [readMore, setReadMore] = useState(false);
 
   return (
     <>
-      <Head>
-        <title>Pizza King</title>
-        <meta name="author" content="SATYA PAL SINGH" />
-        <meta name="description" content="Pizza King is a food delivery app." />
-        <meta name="keywords" content="Tomato Pizza, Paneer Pizza" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" type="image/png" href="/pizza1.png" />
-      </Head>
-
       <HeroSlider />
 
       <Wrapper className="text-center">
