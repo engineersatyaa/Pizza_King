@@ -16,15 +16,13 @@ const roboto = Roboto({
 });
 
 function App({ Component, pageProps }) {
-  const router = useRouter().pathname;
+  const router = useRouter().pathname.split("/")[1];
 
-  const isLoginOrRegisterPage = router === "/login" || router === "/register";
-
-  console.log(router.split("/")[1]);
+  const isLoginOrRegisterPage = router === "login" || router === "register";
 
   let title, description;
 
-  switch (router.split("/")[1]) {
+  switch (router) {
     case "":
       title = "Pizza King - Cheap and Best Online Pizza in India";
       description = "Pizza King is a fast pizza delivery app.";
@@ -59,8 +57,6 @@ function App({ Component, pageProps }) {
       title = "404 Error - Page Not Found";
       description = "Page not found.";
   }
-
-  console.log(description, title);
 
   return (
     <>
