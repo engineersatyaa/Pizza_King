@@ -37,6 +37,7 @@ function Cart() {
                     alt=""
                     width={300}
                     height={300}
+                    priority
                     className="w-28 h-28"
                   />
 
