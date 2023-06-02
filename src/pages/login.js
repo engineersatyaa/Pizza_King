@@ -1,30 +1,56 @@
-import { CgArrowLeft } from "react-icons/cg";
 import Wrapper from "@/components/Wrapper";
 import Link from "next/link";
+import { IoHome } from "react-icons/io5";
 
-export default function Login() {
+function Login() {
   return (
-    <Wrapper className="flex flex-col items-center justify-center gap-3 md:gap-5 h-[calc(100vh-50px)] md:h-[calc(100vh-70px)]">
-      <div className=" text-5xl sm:text-7xl md:text-9xl text-red-600 font-semibold font-sans  md:drop-shadow-[5px_5px_2px_rgba(0,0,0,0.3)]">
-        Login Page
+    <div
+      style={{ backgroundImage: "url('/slide1.jpg')" }}
+      className="w-screen h-screen bg-cover bg-no-repeat bg-center relative"
+    >
+      <div className="absolute top-0 w-full h-full bg-black/[0.12] backdrop-blur-[5px] ">
+        <Wrapper className="text-white h-full flex flex-col justify-between items-center">
+          {/* Header block start */}
+
+          <header className="w-full flex justify-between items-center mt-1">
+            <Link
+              href="/"
+              className="text-2xl sm:text-3xl font-bold md:cursor-pointer"
+            >
+              Pizza King
+            </Link>
+
+            <Link
+              href="/"
+              title="Home Page"
+              className="sm:border sm:border-white sm:p-1 sm:rounded sm:mt-1 md:hover:bg-black/30 md:cursor-pointer "
+            >
+              <IoHome className="w-[22px] h-[22px] sm:w-6 sm:h-6" />
+            </Link>
+          </header>
+
+          {/* Header block end */}
+
+          {/* Form block start */}
+
+          <div className="border w-1/2">
+            <form></form>
+          </div>
+
+          {/* Form block end */}
+
+          {/* Footer block start */}
+
+          <footer className="text-xs mb-2">
+            Copyright &#169; {new Date().getFullYear()} Pizza King&#8482;. All
+            rights reserved.
+          </footer>
+
+          {/* Footer block end */}
+        </Wrapper>
       </div>
-
-      <h1 className="text-base font-semibold sm:text-lg md:text-xl">
-        404 Error | Page Not Found
-      </h1>
-
-      <p className="text-sm  md:text-base md:font-medium text-gray-500 text-center">
-        The page you are looking for might have been removed had its name
-        changed or is temporarily unavailable.
-      </p>
-
-      <Link
-        href="/register"
-        className="bg-red-600 text-white text-sm md:text-base md:font-medium md:cursor-pointer w-52 md:w-60 md:p-[10px]  p-2 mt-2 rounded-full active:scale-[0.95] transition-all duration-75 ease-linear md:hover:bg-black/95  flex items-center justify-center gap-2"
-      >
-        <CgArrowLeft size={24} />
-        Go To Register
-      </Link>
-    </Wrapper>
+    </div>
   );
 }
+
+export default Login;

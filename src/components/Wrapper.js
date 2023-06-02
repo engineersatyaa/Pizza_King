@@ -3,7 +3,7 @@ function Wrapper({ children, className }) {
   // console.log(className);
   return (
     <div
-      className={`w-full max-w-[1280px] px-3 mx-auto md:px-8 min-[426px]:px-5 ${
+      className={`w-full max-w-[1280px] px-3 min-[426px]:px-5 md:px-8 mx-auto ${
         className || ""
       }`}
     >
