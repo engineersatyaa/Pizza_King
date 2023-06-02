@@ -18,9 +18,9 @@ const roboto = Roboto({
 function App({ Component, pageProps }) {
   const router = useRouter().pathname.split("/")[1];
 
-  const isLoginOrRegisterPage = router === "login" || router === "register";
-
-  let title, description;
+  let title,
+    description,
+    isLoginOrRegisterPage = false;
 
   switch (router) {
     case "":
@@ -46,11 +46,13 @@ function App({ Component, pageProps }) {
     case "register":
       title = "Sign Up";
       description = "New user sign up page.";
+      isLoginOrRegisterPage = true;
       break;
 
     case "login":
       title = "Login";
       description = "User login page.";
+      isLoginOrRegisterPage = true;
       break;
 
     default:
