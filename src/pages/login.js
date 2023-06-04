@@ -38,7 +38,7 @@ function Login() {
 
           {/* Login Form block start */}
 
-          <div className="border rounded-md border-white/10 w-[90%] min-[500px]:w-[410px] sm:w-[450px] md:w-[500px] lg:w-[600px] p-3 sm:p-4  bg-white/10 shadow-[0px_0px_5px_8px_rgba(0,0,0,0.1)] text-black">
+          <div className="border rounded-md border-white/10 w-[95%] min-[500px]:w-[410px] sm:w-[450px] md:w-[500px] lg:w-[600px] p-3 sm:p-4  bg-white/10 shadow-[0px_0px_5px_8px_rgba(0,0,0,0.1)] text-black">
             {/* White background form wrapper start */}
 
             <div className="bg-white/80 p-3 sm:p-4 rounded-md ">
@@ -82,7 +82,7 @@ function Login() {
                   type="button"
                   className="bg-black/95 text-white rounded sm:p-2 active:scale-95 transition-transform duration-75 ease-linear flex items-center justify-center min-h-[34px] sm:min-h-[40px] md:hover:bg-red-600 md:cursor-pointer lg:text-lg lg:min-h-[44px]"
                 >
-                  {true ? (
+                  {false ? (
                     <ImSpinner9 className="animate-spin text-xl md:text-2xl" />
                   ) : (
                     "Login"
@@ -129,7 +129,7 @@ function Login() {
 
           {/* Footer block start */}
 
-          <footer className="text-xs mb-2">
+          <footer className="text-xs mb-2 text-center">
             Copyright &#169; {new Date().getFullYear()} Pizza King&#8482;. All
             rights reserved.
           </footer>
