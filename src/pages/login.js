@@ -1,9 +1,9 @@
+import { IoMdEyeOff, IoMdEye } from "react-icons/io";
+import { ImSpinner9 } from "react-icons/im";
+import { IoHome } from "react-icons/io5";
+import { useState } from "react";
 import Wrapper from "@/components/Wrapper";
 import Link from "next/link";
-import { useState } from "react";
-import { ImSpinner6 } from "react-icons/im";
-import { IoMdEyeOff, IoMdEye } from "react-icons/io";
-import { IoHome } from "react-icons/io5";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -36,84 +36,93 @@ function Login() {
 
           {/* Header block end */}
 
-          {/* form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-
-    input {
-      border: 1px solid lightgray;
-      border-radius: 5px;
-      padding: 10px;
-      outline: none;
-      font-size: 15px;
-    } */}
-
           {/* Login Form block start */}
 
-          <div className="border rounded-md border-white/10 w-[90%] p-3 sm:p-4  bg-white/10 shadow-[0px_0px_5px_8px_rgba(0,0,0,0.1)] text-black">
-            <div className="bg-white/80 p-3 sm:p-4 rounded-md ">
-              <form className="border flex flex-col gap-3 sm:gap-4">
-                <input
-                  type="text"
-                  placeholder="Phone or Email"
-                  className="border border-gray-400 rounded outline-none p-1 sm:p-2 text-[15px] min-h-[34px] "
-                />
+          <div className="border rounded-md border-white/10 w-[90%] min-[500px]:w-[410px] sm:w-[450px] md:w-[500px] lg:w-[600px] p-3 sm:p-4  bg-white/10 shadow-[0px_0px_5px_8px_rgba(0,0,0,0.1)] text-black">
+            {/* White background form wrapper start */}
 
-                <div className="flex items-center border border-gray-400 rounded overflow-hidden bg-white min-h-[34px]">
+            <div className="bg-white/80 p-3 sm:p-4 rounded-md ">
+              {/* Form top block start */}
+
+              <form className="flex flex-col gap-3 sm:gap-4">
+                <div className="flex items-center border border-gray-400 rounded p-1 sm:p-2 bg-white min-h-[34px]">
+                  <input
+                    type="text"
+                    placeholder="Phone or Email"
+                    className="w-full outline-none text-[15px] lg:text-base px-[2px] "
+                  />
+                </div>
+
+                <div className="flex items-center border border-gray-400 rounded p-1 sm:p-2 bg-white min-h-[34px]">
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder="Password"
-                    className="w-full h-full outline-none text-[15px] p-1 sm:p-2"
+                    className="w-full outline-none text-[15px] lg:text-base px-[2px]"
                   />
 
                   <div
                     onClick={() => setShowPassword(!showPassword)}
-                    className="p-1 mx-1"
+                    className="p-[2px] ml-[2px] md:cursor-pointer"
                   >
-                    {showPassword ? <IoMdEye /> : <IoMdEyeOff />}
+                    {showPassword ? (
+                      <IoMdEye className="md:text-lg lg:text-xl" />
+                    ) : (
+                      <IoMdEyeOff className="md:text-lg lg:text-xl" />
+                    )}
                   </div>
                 </div>
 
                 {false && (
-                  <span className="text-center text-[15px] text-red-600">
+                  <span className="text-center text-[15px] lg:text-base text-red-600">
                     Error Messages
                   </span>
                 )}
 
                 <button
                   type="button"
-                  className="bg-black/95 text-white rounded sm:p-2 active:scale-95 transition-all duration-75 ease-linear flex items-center justify-center min-h-[34px] md:hover:bg-red-600 md:cursor-pointer"
+                  className="bg-black/95 text-white rounded sm:p-2 active:scale-95 transition-transform duration-75 ease-linear flex items-center justify-center min-h-[34px] sm:min-h-[40px] md:hover:bg-red-600 md:cursor-pointer lg:text-lg lg:min-h-[44px]"
                 >
-                  {false ? <ImSpinner6 className="animate-spin" /> : "Login"}
+                  {true ? (
+                    <ImSpinner9 className="animate-spin text-xl md:text-2xl" />
+                  ) : (
+                    "Login"
+                  )}
                 </button>
               </form>
 
-              <div className=" border flex flex-col gap-3 sm:gap-4 mt-3 sm:mt-4">
+              {/* Form top block end */}
+
+              {/* Form bottom block start */}
+
+              <div className="flex flex-col items-center  gap-3 sm:gap-4 mt-3 sm:mt-4">
                 <Link
                   href=""
-                  className="text-center text-[15px] text-red-600 md:cursor-pointer"
+                  className="text-center text-[15px] lg:text-base text-red-600 md:hover:underline decoration-1 underline-offset-2  md:cursor-pointer"
                 >
                   Forgotten Password ?
                 </Link>
 
-                <p className="text-center text-xs -mt-1">
+                <p className="text-center text-xs -mt-1 lg:text-[13px]">
                   By logging in or creating an account, you agree with our
                   <span className="text-red-600 mx-1">Terms & Conditions</span>
                   and
                   <span className="text-red-600 mx-1">Privacy Statement. </span>
                 </p>
 
-                <hr className="border-t border-t-black/20" />
+                <hr className="border-t border-t-black/20 w-full" />
 
                 <Link
                   href="/register"
-                  className="bg-red-600 text-white rounded sm:p-2 active:scale-95 transition-all duration-75 ease-linear flex items-center  justify-center min-h-[34px] md:hover:bg-black/95 md:cursor-pointer"
+                  className="w-full bg-red-600 text-white rounded sm:p-2 active:scale-95 transition-transform duration-75 ease-linear flex items-center  justify-center min-h-[34px] md:hover:bg-black/95 md:cursor-pointer lg:text-lg"
                 >
                   Create New Account
                 </Link>
               </div>
+
+              {/* Form bottom block end */}
             </div>
+
+            {/* White background form wrapper end */}
           </div>
 
           {/* Login Form block end */}
