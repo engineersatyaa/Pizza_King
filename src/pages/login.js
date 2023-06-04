@@ -17,21 +17,23 @@ function Login() {
         <Wrapper className="text-white h-full flex flex-col justify-between items-center">
           {/* Header block start */}
 
-          <header className="w-full flex justify-between items-center mt-1">
-            <Link
-              href="/"
-              className="text-2xl sm:text-3xl font-bold md:cursor-pointer"
-            >
-              Pizza King
-            </Link>
+          <header className="bg-white/10 w-screen border-b border-white/10 shadow-[0px_2px_5px_5px_rgba(0,0,0,0.2)]">
+            <Wrapper className="flex items-center justify-between py-[6px]">
+              <Link
+                href="/"
+                className="text-2xl sm:text-3xl font-bold md:cursor-pointer"
+              >
+                Pizza King
+              </Link>
 
-            <Link
-              href="/"
-              title="Home Page"
-              className="sm:border sm:border-white sm:p-1 sm:rounded sm:mt-1 md:hover:bg-black/30 md:cursor-pointer "
-            >
-              <IoHome className="w-[22px] h-[22px] sm:w-6 sm:h-6" />
-            </Link>
+              <Link
+                href="/"
+                title="Home Page"
+                className="sm:border sm:border-white sm:p-1 sm:rounded md:hover:bg-black/30 md:cursor-pointer "
+              >
+                <IoHome className="w-[22px] h-[22px] sm:w-6 sm:h-6" />
+              </Link>
+            </Wrapper>
           </header>
 
           {/* Header block end */}
