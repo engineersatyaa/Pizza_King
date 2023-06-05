@@ -47,27 +47,27 @@ function Login() {
               {/* Form top block start */}
 
               <form className="flex flex-col gap-2 sm:gap-[10px]">
-                <div className="flex items-center border border-gray-400 rounded p-1 sm:p-2 bg-white min-h-[34px]">
+                <div className="flex items-center border border-gray-400 rounded overflow-hidden bg-white min-h-[34px]">
                   <input
                     type="text"
                     placeholder="Phone or Email"
                     required
                     autoComplete="off"
-                    className="w-full outline-none text-[15px] lg:text-base px-[2px] "
+                    className="w-full outline-none text-[15px] lg:text-base px-[6px] py-1 sm:px-[10px] sm:py-2 "
                   />
                 </div>
 
-                <div className="flex items-center border border-gray-400 rounded p-1 sm:p-2 bg-white min-h-[34px]">
+                <div className="flex items-center border border-gray-400 rounded overflow-hidden bg-white min-h-[34px]">
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder="Password"
                     required
-                    className="w-full outline-none text-[15px] lg:text-base px-[2px]"
+                    className="w-full outline-none text-[15px] lg:text-base px-[6px] py-1 sm:px-[10px] sm:py-2"
                   />
 
                   <div
                     onClick={() => setShowPassword(!showPassword)}
-                    className="p-[2px] ml-[2px] md:cursor-pointer"
+                    className="p-[2px] mr-1 sm:mr-2 md:cursor-pointer"
                   >
                     {showPassword ? (
                       <IoMdEye className="md:text-lg lg:text-xl" />

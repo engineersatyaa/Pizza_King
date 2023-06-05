@@ -29,7 +29,7 @@ function Register() {
               <Link
                 href="/"
                 title="Home Page"
-                className="sm:border sm:border-white sm:p-1 sm:rounded md:hover:bg-black/30 md:cursor-pointer "
+                className="sm:border sm:border-white sm:p-1 sm:rounded md:hover:bg-black/30 md:cursor-pointer"
               >
                 <IoHome className="w-[22px] h-[22px] sm:w-6 sm:h-6" />
               </Link>
@@ -47,35 +47,41 @@ function Register() {
               {/* Form top block start */}
 
               <form className="flex flex-col gap-2 sm:gap-[10px]">
-                <div className="flex items-center border border-gray-400 rounded p-1 sm:p-2 bg-white min-h-[34px]">
+                <div className="flex items-center border border-gray-400 rounded  overflow-hidden bg-white min-h-[34px]">
                   <input
                     type="text"
                     placeholder="Full Name"
+                    pattern="[a-zA-Z][a-zA-Z ]*[a-zA-Z]$"
+                    title="Numbers,Special Characters and Spaces at the start or end are not allowed."
                     required
-                    className="w-full outline-none text-[15px] lg:text-base px-[2px] "
+                    className="w-full outline-none text-[15px] lg:text-base px-[6px] py-1 sm:px-[10px] sm:py-2"
                   />
                 </div>
 
-                <div className="flex items-center border border-gray-400 rounded p-1 sm:p-2 bg-white min-h-[34px]">
+                <div className="flex items-center border border-gray-400 rounded overflow-hidden  bg-white min-h-[34px]">
                   <input
                     type="text"
                     placeholder="Phone or Email"
+                    pattern="^(?:\d{10}|\w+@\w+\.\w{2,3})$"
+                    title="Valid E-mail or Phone Number of 10 digit without country code."
                     required
-                    className="w-full outline-none text-[15px] lg:text-base px-[2px] "
+                    className="w-full outline-none text-[15px] lg:text-base px-[6px] py-1 sm:px-[10px] sm:py-2 "
                   />
                 </div>
 
-                <div className="flex items-center border border-gray-400 rounded p-1 sm:p-2 bg-white min-h-[34px]">
+                <div className="flex items-center border border-gray-400 rounded overflow-hidden bg-white min-h-[34px]">
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder="Password"
+                    pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8,32}$"
+                    title="Your password must include at least 1 Uppercase and Lowercase letter, 1 Number, 1 Special Character and a length of minimum 8 characters."
                     required
-                    className="w-full outline-none text-[15px] lg:text-base px-[2px]"
+                    className="w-full outline-none text-[15px] lg:text-base px-[6px] py-1 sm:px-[10px] sm:py-2"
                   />
 
                   <div
                     onClick={() => setShowPassword(!showPassword)}
-                    className="p-[2px] ml-[2px] md:cursor-pointer"
+                    className="p-[2px] mr-1 sm:mr-2 md:cursor-pointer"
                   >
                     {showPassword ? (
                       <IoMdEye className="md:text-lg lg:text-xl" />
@@ -85,17 +91,17 @@ function Register() {
                   </div>
                 </div>
 
-                <div className="flex items-center border border-gray-400 rounded p-1 sm:p-2 bg-white min-h-[34px]">
+                <div className="flex items-center border border-gray-400 rounded overflow-hidden bg-white min-h-[34px]">
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder="Confirm Password"
                     required
-                    className="w-full outline-none text-[15px] lg:text-base px-[2px]"
+                    className="w-full outline-none text-[15px] lg:text-base px-[6px] py-1 sm:px-[10px] sm:py-2"
                   />
 
                   <div
                     onClick={() => setShowPassword(!showPassword)}
-                    className="p-[2px] ml-[2px] md:cursor-pointer"
+                    className="p-[2px] mr-1 sm:mr-2 md:cursor-pointer"
                   >
                     {showPassword ? (
                       <IoMdEye className="md:text-lg lg:text-xl" />
