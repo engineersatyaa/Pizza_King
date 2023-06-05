@@ -46,7 +46,7 @@ function Register() {
             <div className="bg-white/80 p-3 sm:p-4 rounded-md ">
               {/* Form top block start */}
 
-              <form className="flex flex-col gap-3 sm:gap-4">
+              <form className="flex flex-col gap-2 sm:gap-[10px]">
                 <div className="flex items-center border border-gray-400 rounded p-1 sm:p-2 bg-white min-h-[34px]">
                   <input
                     type="text"
@@ -109,7 +109,7 @@ function Register() {
 
                 <button
                   type="button"
-                  className="bg-black/95 text-white rounded sm:p-2 active:scale-95 transition-transform duration-75 ease-linear flex items-center justify-center min-h-[34px] sm:min-h-[40px] md:hover:bg-red-600 md:cursor-pointer lg:text-lg lg:min-h-[44px]"
+                  className="bg-black/95 text-white rounded sm:p-2 active:scale-95 transition-transform duration-75 ease-linear flex items-center justify-center min-h-[34px] sm:min-h-[40px] md:hover:bg-red-600 md:cursor-pointer lg:text-lg lg:min-h-[44px] mt-[2px]"
                 >
                   {false ? (
                     <ImSpinner9 className="animate-spin text-xl md:text-2xl" />
@@ -123,7 +123,7 @@ function Register() {
 
               {/* Form bottom block start */}
 
-              <div className="flex flex-col items-center  gap-3 sm:gap-4 mt-3 sm:mt-4">
+              <div className="flex flex-col items-center gap-[10px] mt-4">
                 <p className="text-center text-xs -mt-1 lg:text-[13px]">
                   By logging in or creating an account, you agree with our
                   <span className="text-red-600 mx-1">Terms & Conditions</span>
@@ -135,7 +135,7 @@ function Register() {
 
                 <Link
                   href="/login"
-                  className="w-full bg-red-600 text-white rounded sm:p-2 active:scale-95 transition-transform duration-75 ease-linear flex items-center  justify-center min-h-[34px] md:hover:bg-black/95 md:cursor-pointer lg:text-lg"
+                  className="w-full bg-red-600 text-white rounded sm:p-2 active:scale-95 transition-transform duration-75 ease-linear flex items-center  justify-center min-h-[34px] md:hover:bg-black/95 md:cursor-pointer lg:text-lg mt-[2px]"
                 >
                   Back to Login
                 </Link>
