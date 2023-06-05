@@ -73,7 +73,7 @@ function Register() {
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder="Password"
-                    pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8,32}$"
+                    pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{8,}$"
                     title="Your password must include at least 1 Uppercase and Lowercase letter, 1 Number, 1 Special Character and a length of minimum 8 characters."
                     required
                     className="w-full outline-none text-[15px] lg:text-base px-[6px] py-1 sm:px-[10px] sm:py-2"
