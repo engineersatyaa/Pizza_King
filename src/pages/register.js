@@ -51,6 +51,7 @@ function Register() {
                   <input
                     type="text"
                     placeholder="Full Name"
+                    required
                     className="w-full outline-none text-[15px] lg:text-base px-[2px] "
                   />
                 </div>
@@ -59,6 +60,7 @@ function Register() {
                   <input
                     type="text"
                     placeholder="Phone or Email"
+                    required
                     className="w-full outline-none text-[15px] lg:text-base px-[2px] "
                   />
                 </div>
@@ -67,6 +69,7 @@ function Register() {
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder="Password"
+                    required
                     className="w-full outline-none text-[15px] lg:text-base px-[2px]"
                   />
 
@@ -86,6 +89,7 @@ function Register() {
                   <input
                     type={showPassword ? "text" : "password"}
                     placeholder="Confirm Password"
+                    required
                     className="w-full outline-none text-[15px] lg:text-base px-[2px]"
                   />
 
@@ -108,7 +112,7 @@ function Register() {
                 )}
 
                 <button
-                  type="button"
+                  type="submit"
                   className="bg-black/95 text-white rounded sm:p-2 active:scale-95 transition-transform duration-75 ease-linear flex items-center justify-center min-h-[34px] sm:min-h-[40px] md:hover:bg-red-600 md:cursor-pointer lg:text-lg lg:min-h-[44px] mt-[2px]"
                 >
                   {false ? (
