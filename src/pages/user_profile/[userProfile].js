@@ -1,5 +1,7 @@
+import Wrapper from "@/components/Wrapper";
+
 function UserProfile() {
-  return <div>UserProfile</div>;
+  return <Wrapper>UserProfile</Wrapper>;
 }
 
 export default UserProfile;
