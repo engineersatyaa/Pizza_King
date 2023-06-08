@@ -68,7 +68,7 @@ function Header() {
 
           <div className="relative">
             <Link
-              href="/cart"
+              href="/cart/userId"
               className="flex"
               onClick={() => setShowPhoneMenu(false)}
             >
@@ -86,7 +86,7 @@ function Header() {
 
           <div className="w-8 h-8 ml-1 md:w-11 md:h-11 md:mr-[2px] rounded-full overflow-hidden">
             <Link
-              href="/pizza_details/xyz"
+              href="/user_profile/userId"
               className="flex"
               onClick={() => setShowPhoneMenu(false)}
             >

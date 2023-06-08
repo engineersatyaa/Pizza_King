@@ -28,13 +28,13 @@ const menuData = [
   {
     name: "User Profile",
     icon: <FaUserCircle size={20} className="text-red-600" />,
-    url: "/profile",
+    url: "/user_profile/userId",
   },
 
   {
     name: "Shopping Cart",
     icon: <BsFillCartCheckFill size={20} className="text-red-600" />,
-    url: "/cart",
+    url: "/cart/userId",
   },
 
   {
@@ -81,7 +81,7 @@ function PhoneMenu(props) {
 
   /* To prevent background scrolling when phone menu is opened.
      Add overflow-y: hidden css property to the "body" element when the phone 
-     menu is opened and add overflow-y: visible when you close the phone menu. */
+     menu is open and add overflow-y: visible when you close the phone menu. */
 
   showPhoneMenu
     ? typeof document !== "undefined" &&
@@ -117,7 +117,7 @@ function PhoneMenu(props) {
                   {subMenuData.map((subMenu, index) => (
                     <li key={index}>
                       <Link
-                        href={"/category/non_veg"}
+                        href={"/category/catName"}
                         className="flex justify-between gap-8 text-sm font-medium  w-full p-3 border-t border-white/10"
                         onClick={() => setShowPhoneMenu(false)}
                       >
