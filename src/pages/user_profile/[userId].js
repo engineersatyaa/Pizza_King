@@ -5,7 +5,7 @@ import { ImSpinner9 } from "react-icons/im";
 
 function UserProfile() {
   return (
-    <Wrapper className="py-3">
+    <Wrapper className="py-3 min-h-[calc(100vh-50px)] md:min-h-[calc(100vh-70px)]">
       {/* Banner and DP block start */}
 
       <div className="relative h-[90px] sm:h-[120px] md:h-[150px] lg:h-[180px] ">
@@ -36,8 +36,8 @@ function UserProfile() {
 
         {/* DP block start */}
 
-        <div className="bg-red-100 absolute top-1/2 left-1/2 -translate-x-1/2 w-[50%] h-[120px]">
-          <div className="relative w-20 h-20 mx-auto border-2 border-red-600 rounded-full">
+        <div className="absolute top-[35%] left-1/2 -translate-x-1/2 p-1">
+          <div className="relative w-[85px] h-[85px] mx-auto border-2 border-red-600 rounded-full">
             <div className="w-full h-full relative rounded-full overflow-hidden">
               <Image
                 src="/girldp.webp"
@@ -49,7 +49,7 @@ function UserProfile() {
               />
             </div>
 
-            <label className="absolute bottom-0 right-0 bg-white p-1 rounded-full text-red-600 text-sm sm:text-base md:text-lg md:cursor-pointer">
+            <label className="absolute bottom-0 right-0 bg-white p-1 border border-red-600 rounded-full text-red-600 text-sm sm:text-base md:text-lg md:cursor-pointer">
               <input type="file" className="hidden" />
 
               {false ? (
@@ -60,7 +60,9 @@ function UserProfile() {
             </label>
           </div>
 
-          <h2 className="max-w-max mx-auto text-sm font-semibold">Sameer Jaduan</h2>
+          <h2 className="max-w-max mx-auto text-sm font-semibold">
+            Sameer Jadaun
+          </h2>
         </div>
 
         {/* DP block end */}
