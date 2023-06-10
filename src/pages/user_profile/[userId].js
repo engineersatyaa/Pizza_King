@@ -1,9 +1,19 @@
-import Wrapper from "@/components/Wrapper";
-import Image from "next/image";
+import { useState } from "react";
 import { BsCameraFill } from "react-icons/bs";
 import { ImSpinner9 } from "react-icons/im";
+import Wrapper from "@/components/Wrapper";
+import Image from "next/image";
+
+const listItems = [
+  { id: 1, name: "User Details" },
+  { id: 2, name: "Reviews" },
+  { id: 3, name: "Favorite Orders" },
+  { id: 4, name: "Order History" },
+];
 
 function UserProfile() {
+  const [listItemClicked, setListItemClicked] = useState("User Details");
+
   return (
     <Wrapper className="py-3 min-h-[calc(100vh-50px)] md:min-h-[calc(100vh-70px)]">
       {/* Banner and DP block start */}
@@ -17,11 +27,12 @@ function UserProfile() {
             alt="Food Banner"
             priority
             fill={true}
+            sizes="95vw"
             className="object-cover"
           />
         </div>
 
-        <div className="bg-white rounded absolute bottom-[6px] right-[6px] sm:bottom-2 sm:right-2 z-10 shadow-[0px_0px_5px_4px_rgba(0,0,0,0.3)]">
+        <div className="bg-white rounded absolute bottom-[6px] right-[6px] sm:bottom-2 sm:right-2 shadow-[0px_0px_5px_4px_rgba(0,0,0,0.3)]">
           <label className="flex items-center justify-center gap-[6px] md:gap-2 py-1 px-2 font-bold md:font-semibold text-xs sm:text-sm md:text-base  text-red-600 md:cursor-pointer">
             {false ? (
               <ImSpinner9 className="animate-spin text-sm sm:text-base md:text-lg lg:text-xl" />
@@ -69,6 +80,54 @@ function UserProfile() {
       </div>
 
       {/* Banner and DP block end */}
+
+      <hr className="border-t sm:border-t-2  mt-20 sm:mt-24 md:mt-28 lg:mt-32" />
+
+      {/* Bottom block start */}
+
+      <section className="flex flex-col md:flex-row gap-5 mt-5">
+
+        <aside className=" md:flex-[1_0_0%] md:border ">
+          <ul className="list-none text-sm md:text-base font-medium flex items-center justify-center flex-wrap gap-1 md:gap-1  md:flex-col md:items-start md:justify-normal">
+            {listItems.map((listItem) => (
+              <li
+                key={listItem.id}
+                onClick={(e) => setListItemClicked(e.target.textContent)}
+                className={`min-w-max mx-1 md:mx-0 md:p-[6px] lg:p-2 md:w-full md:cursor-pointer  ${
+                  listItem.name === listItemClicked && "text-red-600 md:border-l-4 border-red-400 md:bg-gradient-to-r from-white via-red-100 to-red-200"
+                }`}
+              >
+                {listItem.name}
+              </li>
+            ))}
+          </ul>
+        </aside>
+
+        <div className="md:flex-[3_0_0%] min-h-[200px] border border-gray-300">
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          <div>LOver</div>
+          Details</div>
+      </section>
+
+      {/* Bottom block end */}
     </Wrapper>
   );
 }
