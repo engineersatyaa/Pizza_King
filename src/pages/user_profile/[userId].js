@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BsCameraFill } from "react-icons/bs";
 import { ImSpinner9 } from "react-icons/im";
+import { FiEdit } from "react-icons/fi";
 import Wrapper from "@/components/Wrapper";
 import Image from "next/image";
 
@@ -89,7 +90,7 @@ function UserProfile() {
         {/* Sidebar list start */}
 
         <aside className="md:flex-[1_0_0%] md:border border-gray-200 rounded-sm overflow-hidden md:h-max md:sticky md:top-[90px]">
-          <ul className="list-none text-sm md:text-base font-medium flex items-center justify-center flex-wrap gap-1 md:flex-col md:items-start md:justify-normal">
+          <ul className="list-none text-[15px] md:text-base font-medium flex items-center justify-center flex-wrap gap-1 md:flex-col md:items-start md:justify-normal">
             {listItems.map((listItem) => (
               <li
                 key={listItem.id}
@@ -109,8 +110,36 @@ function UserProfile() {
 
         {/* Right details block start */}
 
-        <section className="md:flex-[3_0_0%] border border-gray-200 rounded-sm h-auto">
-          Details
+        <section className="md:flex-[3_0_0%] border border-gray-200 rounded-sm h-auto p-3">
+          <div className="flex items-center justify-between border-b border-gray-200 pb-3 mb-3">
+            <h3 className="text-base font-semibold md:text-xl lg:text-[22px]">
+              User Details
+            </h3>
+            <button
+              title="Edit"
+              className="border-none text-lg md:text-xl md:cursor-pointer md:hover:text-red-600"
+            >
+              <FiEdit />
+            </button>
+          </div>
+
+          <div className="text-sm md:text-[15px] lg:text-base text-gray-600 flex flex-col gap-3">
+            <p>
+              <b>Gender :</b> <span>Male</span>
+            </p>
+            <p>
+              <b>Name :</b> <span>Sameer Jadaun</span>
+            </p>
+            <p>
+              <b>Phone :</b> <span>798246070X</span>
+            </p>
+            <p>
+              <b>Email :</b> <span>engineersatyaa@gmail.com</span>
+            </p>
+            <p>
+              <b>Address :</b> <span>1/1164A Main Road, Delhi-India</span>
+            </p>
+          </div>
         </section>
 
         {/* Right details block end */}
