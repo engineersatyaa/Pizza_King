@@ -125,9 +125,6 @@ function UserProfile() {
 
           <div className="text-sm md:text-[15px] lg:text-base text-gray-600 flex flex-col gap-3">
             <p>
-              <b>Gender :</b> <span>Male</span>
-            </p>
-            <p>
               <b>Name :</b> <span>Sameer Jadaun</span>
             </p>
             <p>
@@ -137,7 +134,7 @@ function UserProfile() {
               <b>Email :</b> <span>engineersatyaa@gmail.com</span>
             </p>
             <p>
-              <b>Address :</b> <span>1/1164A Main Road, Delhi-India</span>
+              <b>Address :</b> <span>1/1164A Main Road, Delhi - India</span>
             </p>
           </div>
         </section>

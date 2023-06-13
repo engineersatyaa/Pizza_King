@@ -38,6 +38,11 @@ function App({ Component, pageProps }) {
       description = "Details of pizza's price,sizes,toppings,veg or non-veg.";
       break;
 
+    case "user_profile":
+      title = "User Profile";
+      description = "User's personal details.";
+      break;
+
     case "cart":
       title = "Shopping Cart";
       description = "User's pizza shopping cart.";
