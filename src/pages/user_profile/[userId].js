@@ -113,8 +113,9 @@ function UserProfile() {
         <section className="md:flex-[3_0_0%] border border-gray-200 rounded-sm h-auto p-3">
           <div className="flex items-center justify-between border-b border-gray-200 pb-3 mb-3">
             <h3 className="text-base font-semibold md:text-xl lg:text-[22px]">
-              User Details
+              {listItemClicked}
             </h3>
+
             <button
               title="Edit"
               className="border-none text-lg md:text-xl md:cursor-pointer md:hover:text-red-600"
