@@ -85,7 +85,7 @@ function UserProfile() {
 
       {/* Bottom block start */}
 
-      <section className="flex flex-col md:flex-row gap-5 mt-5">
+      <div className="flex flex-col md:flex-row gap-5 mt-5">
         {/* Sidebar start */}
 
         <aside className="md:flex-[1_0_0%] md:border border-gray-200 rounded-sm overflow-hidden md:h-max md:sticky md:top-[90px]">
@@ -109,12 +109,12 @@ function UserProfile() {
 
         {/* Right details block start */}
 
-        <div className="md:flex-[3_0_0%] border border-gray-200 rounded-sm h-auto">
+        <section className="md:flex-[3_0_0%] border border-gray-200 rounded-sm h-auto">
           Details
-        </div>
+        </section>
 
         {/* Right details block end */}
-      </section>
+      </div>
 
       {/* Bottom block end */}
     </Wrapper>
