@@ -86,15 +86,17 @@ function UserProfile() {
       {/* Bottom block start */}
 
       <section className="flex flex-col md:flex-row gap-5 mt-5">
+        {/* Sidebar start */}
 
-        <aside className=" md:flex-[1_0_0%] md:border ">
-          <ul className="list-none text-sm md:text-base font-medium flex items-center justify-center flex-wrap gap-1 md:gap-1  md:flex-col md:items-start md:justify-normal">
+        <aside className="md:flex-[1_0_0%] md:border border-gray-200 rounded-sm overflow-hidden md:h-max md:sticky md:top-[90px]">
+          <ul className="list-none text-sm md:text-base font-medium flex items-center justify-center flex-wrap gap-1 md:flex-col md:items-start md:justify-normal">
             {listItems.map((listItem) => (
               <li
                 key={listItem.id}
                 onClick={(e) => setListItemClicked(e.target.textContent)}
-                className={`min-w-max mx-1 md:mx-0 md:p-[6px] lg:p-2 md:w-full md:cursor-pointer  ${
-                  listItem.name === listItemClicked && "text-red-600 md:border-l-4 border-red-400 md:bg-gradient-to-r from-white via-red-100 to-red-200"
+                className={`min-w-max mx-1 md:mx-0 md:p-[6px] lg:p-2 md:w-full md:cursor-pointer transition-all  ${
+                  listItem.name === listItemClicked &&
+                  "text-red-600 md:border-l-4 border-red-400 md:bg-gradient-to-r from-white via-red-100 to-red-200"
                 }`}
               >
                 {listItem.name}
@@ -103,28 +105,15 @@ function UserProfile() {
           </ul>
         </aside>
 
-        <div className="md:flex-[3_0_0%] min-h-[200px] border border-gray-300">
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          <div>LOver</div>
-          Details</div>
+        {/* Sidebar end */}
+
+        {/* Right details block start */}
+
+        <div className="md:flex-[3_0_0%] border border-gray-200 rounded-sm h-auto">
+          Details
+        </div>
+
+        {/* Right details block end */}
       </section>
 
       {/* Bottom block end */}
