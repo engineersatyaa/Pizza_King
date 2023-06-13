@@ -15,7 +15,7 @@ function UserProfile() {
   const [listItemClicked, setListItemClicked] = useState("User Details");
 
   return (
-    <Wrapper className="py-3 min-h-[calc(100vh-50px)] md:min-h-[calc(100vh-70px)]">
+    <Wrapper className="pt-3 pb-5 min-h-[calc(100vh-50px)] md:min-h-[calc(100vh-70px)]">
       {/* Banner and DP block start */}
 
       <div className="relative h-[90px] sm:h-[120px] md:h-[150px] lg:h-[180px]">
