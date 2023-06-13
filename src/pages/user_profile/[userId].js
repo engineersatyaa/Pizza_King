@@ -86,7 +86,7 @@ function UserProfile() {
       {/* Bottom block start */}
 
       <div className="flex flex-col md:flex-row gap-5 mt-5">
-        {/* Sidebar start */}
+        {/* Sidebar list start */}
 
         <aside className="md:flex-[1_0_0%] md:border border-gray-200 rounded-sm overflow-hidden md:h-max md:sticky md:top-[90px]">
           <ul className="list-none text-sm md:text-base font-medium flex items-center justify-center flex-wrap gap-1 md:flex-col md:items-start md:justify-normal">
@@ -96,7 +96,7 @@ function UserProfile() {
                 onClick={(e) => setListItemClicked(e.target.textContent)}
                 className={`min-w-max mx-1 md:mx-0 md:p-[6px] lg:p-2 md:w-full md:cursor-pointer transition-all  ${
                   listItem.name === listItemClicked &&
-                  "text-red-600 md:border-l-4 border-red-400 md:bg-gradient-to-r from-white via-red-100 to-red-200"
+                  "text-red-600 underline underline-offset-[1.5px] decoration-1 md:no-underline md:border-l-4 md:border-red-400 md:bg-gradient-to-r from-white via-red-100 to-red-200"
                 }`}
               >
                 {listItem.name}
@@ -105,7 +105,7 @@ function UserProfile() {
           </ul>
         </aside>
 
-        {/* Sidebar end */}
+        {/* Sidebar list end */}
 
         {/* Right details block start */}
 
