@@ -84,7 +84,7 @@ function UserProfile() {
 
       <hr className="border-t sm:border-t-2  mt-20 sm:mt-24 md:mt-28 lg:mt-32" />
 
-      {/* Bottom block start */}
+      {/* User details block start */}
 
       <div className="flex flex-col md:flex-row gap-5 mt-5">
         {/* Sidebar list start */}
@@ -143,7 +143,7 @@ function UserProfile() {
         {/* Right details block end */}
       </div>
 
-      {/* Bottom block end */}
+      {/* User details block end */}
     </Wrapper>
   );
 }
